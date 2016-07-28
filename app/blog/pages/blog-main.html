@@ -1,0 +1,22 @@
+<div class="container-fluid" ng-controller="BlogMainPageController">
+    <div class="row">
+        <div class="col-sm-3 col-md-3 list-group">
+            <side-menu></side-menu>
+        </div>
+        <div class="col-sm-8 col-md-8 bg-success">
+            <div ng-repeat="article in $ctrl.articles.data">
+                {{ article.id }}
+                <a href="#"><h1 class="text-capitalize text-left">{{article.title}}</h1></a>
+                <img class='img-responsive' src="#" alt="image">
+                <article class="text-left text-capitalize">{{article.messageBody}}</article>
+                <h3 class="text-capitalize text-left">Author: {{article.author}}</h3>
+                <p class="text-right"><i>Published at: </i></p>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-4 col-md-offset-4 myfooter">
+            paginate
+        </div>
+    </div>
+</div>
