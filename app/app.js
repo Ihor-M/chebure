@@ -3,7 +3,7 @@
 // Declare app level module which depends on views, and components
 
 
-angular.module('myBlog', [
+var app = angular.module('myBlog', [
     'ngRoute',
     'headerBlog',
     'blogFooter',

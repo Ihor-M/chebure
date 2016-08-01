@@ -2,13 +2,13 @@
     <div class="row">
         <div class="col-md-offset-2 col-md-8">
 
-            <div class="alert alert-info news-list-title">
-                <h3><a class="alert-link" href="#" class="my-buttons">title</a></h3>
+            <div class="alert alert-info news-list-title" ng-repeat="myPost in myPosts">
+                <h3><a class="alert-link" href="#" class="my-buttons">{{myPost.title}}</a></h3>
                 <div class="news-list">
-                    <img class='img-responsive' src="#" alt="image">
-                    <article class="text-left text-capitalize">body</article>
-                    <h3 class="text-capitalize text-left">Author: author</h3>
-                    <p class="text-right">Posted at: </p>
+                    <img class='img-responsive' ng-src="http://myblog.com/images/{{myPost.image_path}}" alt="image">
+                    <article class="text-left text-capitalize">{{myPost.messageBody}}</article>
+                    <h3 class="text-capitalize text-left">Author: {{myPost.author}}</h3>
+                    <p class="text-right">Posted at: {{myPost.created_at}}</p>
                 </div>
             </div>
 

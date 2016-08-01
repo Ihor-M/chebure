@@ -3,11 +3,11 @@
     <div class="news-list">
         <ul class="list-group">
 
-            <li class="list-group-item">
-                <a href="#"><h4><b>title</b></h4></a>
-                <p>body</p>
-                <h5><b>author</b></h5>
-                <span><i>Published at: </i></span>
+            <li class="list-group-item" ng-repeat="latestNew in latestNews">
+                <a href="#"><h4><b>{{latestNew.title}}</b></h4></a>
+                <p>{{latestNew.messageBody.substr(0, 200)}}</p>
+                <h5><b>{{latestNew.author}}</b></h5>
+                <span><i>Published at: {{latestNew.created_at}}</i></span>
             </li>
 
         </ul>
@@ -18,11 +18,11 @@
     <div class="news-list">
         <ul class="list-group">
 
-            <li class="list-group-item">
-                <a href="#"><h4><b>title</b></h4></a>
-                <p>body</p>
-                <h5><b>author</b></h5>
-                <span><i>Published at: </i></span>
+            <li class="list-group-item" ng-repeat="carsCategory in carsCategiries">
+                <a href="#"><h4><b>{{carsCategory.title}}</b></h4></a>
+                <p>{{carsCategory.messageBody.substr(0, 200)}}</p>
+                <h5><b>{{carsCategory.author}}</b></h5>
+                <span><i>Published at: {{carsCategory.created_at}}</i></span>
             </li>
 
         </ul>
@@ -33,11 +33,11 @@
     <div class="news-list">
         <ul class="list-group">
 
-            <li class="list-group-item">
-                <a href="#"><h4><b>title</b></h4></a>
-                <p>body</p>
-                <h5><b>author</b></h5>
-                <span><i>Published at: </i></span>
+            <li class="list-group-item" ng-repeat="technologyCategory in technologyCategories ">
+                <a href="#"><h4><b>{{technologyCategory.title}}</b></h4></a>
+                <p>{{technologyCategory.messageBody.substr(0, 200)}}</p>
+                <h5><b>{{technologyCategory.author}}</b></h5>
+                <span><i>Published at: {{technologyCategory.created_at}}</i></span>
             </li>
 
         </ul>
@@ -48,11 +48,11 @@
     <div class="news-list">
         <ul class="list-group">
 
-            <li class="list-group-item">
-                <a href="#"><h4><b>title</b></h4></a>
-                <p>body</p>
-                <h5><b>author</b></h5>
-                <span><i>Published at: </i></span>
+            <li class="list-group-item" ng-repeat="sportsCategory in sportsCategories">
+                <a href="#"><h4><b>{{sportsCategory.title}}</b></h4></a>
+                <p>{{sportsCategory.messageBody.substr(0, 200)}}</p>
+                <h5><b>{{sportsCategory.author}}</b></h5>
+                <span><i>Published at: {{sportsCategory.created_at}}</i></span>
             </li>
 
         </ul>

@@ -1,17 +1,16 @@
 'use strict';
 
+app.controller('PostsController', function($scope, $http) {
+    $scope.articles = [];
+    $http.get("http://myblog.com/api/posts").then(function (response) {
+        $scope.articles = response.data.data;
+    });
+});
+
 
 angular.
     module('blogMain').
     component('blogMain', {
         templateUrl: 'blog/pages/blog-main.html',
-        controller: ['$http', function BlogMainPageController($http) {
-            var self = this;
-
-            $http.get('http://myblog.com/').then(function (response) {
-                console.log(response.data.posts);
-                self.articles = response.data.posts;
-            });
-        }]
+        controller: 'PostsController'
 });
-
